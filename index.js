@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const config = require('./config.json');
 
 const bot = new Discord.Client({
-	disableMentions: "everyone"
+	disableMentions: "everyone" // Completely optional. Disables @everyone and @here mentions.
 });
 
 bot.config = config;
@@ -17,16 +17,12 @@ for (const file of commandFiles) {
 }
 const cooldowns = new Discord.Collection();
 
-const PBL = require('paradiseapi.js')
-const pbl = new PBL.get("746855438296809522", "zcpcpowb1306urdggpbsfm8494vrtnjxcddud")
-
 bot.once('ready', () => {
 	bot.user.setActivity(`with Mods • ${bot.config.prefix}help`, {
 		type: "PLAYING"
 	});
 	bot.channels.cache.get(`${config.logs}`).send(`I am online on login: \`${bot.user.tag}\``);
 	
-	pbl.post(bot.guilds.cache.size);
 });
 
 bot.on('message', message => {
