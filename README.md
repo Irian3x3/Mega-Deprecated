@@ -29,7 +29,7 @@
         Fun commands such as <code>lenny</code> generators, or <code>reddit</code> search command
       </li>
       <li>
-        Info commands such as <code>serverinfo</code> or <code>userinfo</code> commands (userinfo do be broken tho)
+        Info commands such as <code>serverinfo</code> or <code>userinfo</code> commands
       </li>
     </ul></em>
   </p>
